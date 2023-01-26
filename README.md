@@ -26,6 +26,6 @@ shadowing
 
 You’re also free to make your own components and use them in your MDX pages.
 
-## What’s Next?
+## What’s Next? 
 
 [Check out the docs!](https://gatsby-theme-carbon.now.sh)
