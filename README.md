@@ -1,4 +1,4 @@
-# Gatsby Theme Carbon Starter
+# Gatsby Theme Carbon Starter 
 
 ## What is this?
 
