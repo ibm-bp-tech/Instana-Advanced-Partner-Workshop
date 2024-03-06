@@ -46,6 +46,8 @@
       path: /Labs_Advanced_Topics/Lab2
     - title: Lab 3 - Custom Dashboards
       path: /Labs_Advanced_Topics/Lab3
+    - title: Lab 4 - Synthetic Monitoring
+      path: /Labs_Advanced_Topics/Lab4
     - title: Reference - vi Editor
       path: /Labs/vi
       
