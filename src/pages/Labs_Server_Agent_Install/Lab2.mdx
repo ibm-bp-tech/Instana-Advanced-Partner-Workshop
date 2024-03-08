@@ -1,4 +1,4 @@
---
+---
 title: Lab2
 ---
 export const Title = () => (
@@ -44,7 +44,7 @@ sudo service instana-agent status
 
 Hint: type “:q” to exit status command.
 
-![Lab 2](../images/2.3.png)
+![Lab 2](../Labs/images/2.3.png)
 
 
 ## Step 3:
@@ -75,12 +75,12 @@ An alternative to the vi editor is nano. I may be easier for those that are not 
 sudo vi org.ops4j.pax.logging.cfg
 ```
 
-![Lab 2](../images/lab2.2.png)
+![Lab 2](../Labs/images/lab2.2.png)
 
 Now, change from INFO to DEBUG on the line seen below.
 Check out vi commands if you are experiencing an issue.
 
-![Lab 2](../images/lab2.3.png)
+![Lab 2](../Labs/images/lab2.3.png)
 
 Once you have modified with the proper value, save your work.
 
@@ -120,10 +120,10 @@ The Agents view, which is located in the main navigation bar under More > Agents
 When you use the search bar on the page, the view can be narrowed down to a subset of agents by using Dynamic Focus Queries.
 
 Go to the Agent Management Dashboard 
-![Lab 2](../images/lab2.7a.png)
+![Lab 2](../Labs/images/lab2.7a.png)
 
 Look for for your Agent Name, and validate that the Agent is "Reporting" and with "Green" color circle to show that is he healthy.  
-![Lab 2](../images/lab2.7b.png)
+![Lab 2](../Labs/images/lab2.7b.png)
 
 Changing Agent modes:
 The host agent mode is relevant for host-based licensing, and it is used to decide whether the agent counts as an Infrastructure or an APM agent. The host agent mode can be toggled by using Change Agent Mode control.
@@ -132,7 +132,7 @@ In the Change Agent Mode dialog, the following options are provided:
     Infrastructure, which maps to the INFRASTRUCTURE host agent mode
     Disabled, which maps to the OFF host agent mode
 Make sure that you Agent is set for "APM"
-![Lab 2](../images/lab2.7c.png)
+![Lab 2](../Labs/images/lab2.7c.png)
 
 Changing log level:
 The log level defines the level of detail that the agent logs contain.
@@ -141,7 +141,7 @@ In the Change Agent Log Level dialog, the following options are provided:
     DEBUG, extended details for troubleshooting
     TRACE, most details for further problem analysis
 Make sure that you Agent is set for "APM"
-![Lab 2](../images/lab2.7d.png)
+![Lab 2](../Labs/images/lab2.7d.png)
 
 Updating Agents:
 This button manually triggers the agent auto update as described at Updates of Dynamic Host Agents.
@@ -155,20 +155,20 @@ Rebooting Agents:
 Rebooting the agent stops the current agent process and create a new one. The process of the used start script remains unchanged, but operating system level watchdogs and service scripts might see a changed process identifier (pid) depending on their watch target.
 Note; During the restart, the host agent cannot provide any data, which results in a short gap.
 
-![Lab 2](../images/lab2.7e.png)
+![Lab 2](../Labs/images/lab2.7e.png)
 
 Sensor information:
 To view the list of sensors and host agent components that are used by the agent, click Sensors Info.
-![Lab 2](../images/lab2.7f.png)
+![Lab 2](../Labs/images/lab2.7f.png)
 
-![Lab 2](../images/lab2.7g.png)
+![Lab 2](../Labs/images/lab2.7g.png)
 
 Self monitoring:
 Not only is the host agent monitoring other software that is running on the host, but it also does constant lightweight self-monitoring. Gathered metrics can be used to observe host agent performance and resource consumption:
 
 Agent metrics:
-![Lab 2](../images/lab2.7h.png)
+![Lab 2](../Labs/images/lab2.7h.png)
 
 Agent Logs: 
-You can see the Agent log from Insana portal 
-![Lab 2](../images/lab2.7i.png)
+You can see the Agent log from Instana portal 
+![Lab 2](../Labs/images/lab2.7i.png)
