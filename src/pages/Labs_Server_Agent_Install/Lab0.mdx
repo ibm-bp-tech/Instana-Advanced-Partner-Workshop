@@ -1,9 +1,12 @@
 ---
-title: 3. Instana Server Installation
-description:
-  How to install the Instana Server on a single server Self-Hosted configuration
-sidebar_position: 4
+title: Lab1
 ---
+export const Title = () => (
+  <span>
+    Lab 0 - Instana Server Installation <br />
+  </span>
+);
+;
 
 # Instana Server Installation
 
@@ -88,7 +91,7 @@ docker ps
 
 If docker is running, you should see output similar to what is shown below.
 
-![docker-ps](images/docker-ps.png)
+![docker-ps](../Labs/images/docker-ps.png)
 
 Next, we want to pin the major version of Instana so that we don't get updates
 during the lab. Issue the following command to pin the Instana version.
@@ -170,7 +173,7 @@ enable additional features and make other configuration settings in the future.
 You will be prompted to select **single**, **dual-instana**, or
 **dual-clickhouse**. Type **Enter** to select **single**
 
-![](images/single.png)
+![](../Labs/images/single.png)
 
 Next, you will be prompted to enter a tenant name for your Instana server. This
 can be any string. In a single server installation, the tenant name doesn't
@@ -178,7 +181,7 @@ really matter, but in multi-tenant or SaaS environment, the tenant name is very
 important because it becomes part of the URL to access the Instana server.
 Customers frequently use their company name for the tenant.
 
-![](images/tenant.png)
+![](../Labs/images/tenant.png)
 
 Next, you will be prompted to enter a unit name. In a single server
 installation, the unit name doesn't really matter, but in multi-tenant or SaaS
@@ -186,20 +189,20 @@ environment, the unit name is very important because it becomes part of the URL
 to access the Instana server. Customers frequently use a business unit or Dev,
 Test, Prod to identify the unit.
 
-![](images/unit.png)
+![](../Labs/images/unit.png)
 
 You will now be prompted for your **agent key**. Use the one provided by the Instructor.
 
-![](images/agentKey.png)
+![](../Labs/images/agentKey.png)
 
 The next step is to enter your **download key**. Use the same key as your
 **agent key** from the previous step.
 
-![](images/downloadKey.png)
+![](../Labs/images/downloadKey.png)
 
 Next, enter your **sales key**. Use the one provided by the Instructor.
 
-![](images/salesKey.png)
+![](../Labs/images/salesKey.png)
 
 Next, you will be prompted for the fully qualified hostname of the server.
 Normally, you would enter a fully qualified hostname, but in this demo
@@ -208,28 +211,28 @@ environment we will use the IP address.
 **Important** : Instead of specifying the hostname or fqdn, enter the **IP address** of the
 Instana server provided to you. 
 
-![](images/hostname.png)
+![](../Labs/images/hostname.png)
 
 You will now be prompted for the path where your data will be stored. The
 default path is **/mnt/data**. Press **Enter** to accept the default value.
 
-![](images/data.png)
+![](../Labs/images/data.png)
 
 You will now be prompted for the path where your traces will be stored. The
 default path is **/mnt/traces**. Press **Enter** to accept the default value.
 
-![](images/traces.png)
+![](../Labs/images/traces.png)
 
 Next, you will be prompted for the path where your metric data will be stored.
 The default path is **/mnt/metrics**. Press **Enter** to accept the default
 value.
 
-![](images/metrics.png)
+![](../Labs/images/metrics.png)
 
 You will be prompted for the location of the Instana logs. Press **Enter** to
 accept the default value of **/var/log/instana**.
 
-![](images/logs.png)
+![](../Labs/images/logs.png)
 
 You will be prompted for the path to your signed certificate file. If desired,
 you can create your own. If you don't provide one, the installer will generate a
@@ -238,13 +241,13 @@ If you were deploying at a customer site and the customer wanted to use CA
 signed certificates, this is the step where you would specify the existing
 certificate.
 
-![](images/certificate.png)
+![](../Labs/images/certificate.png)
 
 Finally, you will be prompted for the private key file. For this lab, press
 **Enter** and have the install generate the key file for the self-signed
 certificate.
 
-![](images/key.png)
+![](../Labs/images/key.png)
 
 Instana will now begin the installation process. It will take 20 to 30 minutes
 to complete the installation process.
@@ -265,7 +268,7 @@ information so that you can use it later to login to the Instana user interface.
 
 The output should look something like this:
 
-![](images/install-success.png)
+![](../Labs/images/install-success.png)
 
 Before attempting to login to your Instana server, activate the license using
 the steps in the following section.
@@ -298,7 +301,7 @@ Run the following command to download the license:
 instana license download
 ```
 
-![](images/licenseDownload_opt_instana.png)
+![](../Labs/images/licenseDownload_opt_instana.png)
 
 Next, import the license to activate your license:
 
@@ -306,7 +309,7 @@ Next, import the license to activate your license:
 instana license import
 ```
 
-![](images/licenseImport_opt_instana.png)
+![](../Labs/images/licenseImport_opt_instana.png)
 
 You can verify the license by typing:
 
@@ -314,7 +317,7 @@ You can verify the license by typing:
 instana license verify
 ```
 
-![](images/licenseVerify_opt_instana.png)
+![](../Labs/images/licenseVerify_opt_instana.png)
 
 ---
 
@@ -324,20 +327,20 @@ You are now ready to open a browser and login to the Instana user interface.
 
 You can safely ignore the warning about the certificate being untrusted.
 
-![untrusted-cert-advance](images/untrusted-cert-advance.png)
+![untrusted-cert-advance](../Labs/images/untrusted-cert-advance.png)
 
 When prompted, enter the username and password that you updated earlier.
 
 - Username: **admin@instana.local**
 - Password: **Passw0rd**
 
-![](images/login.png)
+![](../Labs/images/login.png)
 
 You will be taken to an Initial Screen where you can install the instana agents
 or navigate to the main product UI. We will install an Instana Agent in the
 upcoming labs.
 
-![initial-instana-page](images/initial-instana-page.png)
+![initial-instana-page](../Labs/images/initial-instana-page.png)
 
 ---
 
@@ -436,7 +439,7 @@ read it while the configuration changes are being applied.
 
 Once complete you should see the below
 
-![settings update](images/settings-update.png)
+![settings update](../Labs/images/settings-update.png)
 
 ---
 
@@ -466,7 +469,7 @@ apt-cache policy instana-console
 ```
 
 You will see a long list of versions that are available. Scroll to the top of
-the list where you will see the most recent versions. ![](images/versions.png)
+the list where you will see the most recent versions. ![](../Labs/images/versions.png)
 
 You'll notice that in this example, 265-0-1 is the most recent version and 265-1-1
 is the current version. That means you can upgrade to that minor release. There
